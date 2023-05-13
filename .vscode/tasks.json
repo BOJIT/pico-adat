@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Pico Upload",
+            "command": "${command:cmake.tasksBuildCommand} && /usr/bin/gdb-multiarch -q build/main.elf -ex 'target remote localhost:23532' -ex load -ex 'monitor reset halt' -ex 'monitor rp2040.core1 arp_reset assert 0' -ex 'monitor rp2040.core0 arp_reset assert 0' -ex 'set confirm off' -ex quit",
+            "type": "shell",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "options": {
+                "statusbar": {
+                  "label" : "$(play) Upload",
+                  "tooltip": "Upload to Target"
+                }
+            }
+        }
+    ]
+}

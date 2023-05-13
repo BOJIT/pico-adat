@@ -1,0 +1,9 @@
+# VSCode
+.vscode/settings.json
+.vscode/cpp.code-snippets
+
+# Cortex-Debug
+.vscode/.cortex-debug.*
+
+# CMake
+build/*

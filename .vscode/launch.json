@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Pico Debug",
+            "cwd": "${workspaceRoot}",
+            "device": "RP2040",
+            "executable": "${command:cmake.launchTargetPath}",
+            "servertype": "external",
+            "gdbTarget": "localhost:23532",
+            "request": "launch",
+            "rtos": "FreeRTOS",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "gdbPath" : "/usr/bin/gdb-multiarch",
+            "svdFile": "/home/pico-sdk/src/rp2040/hardware_regs/rp2040.svd",
+        }
+    ]
+}
