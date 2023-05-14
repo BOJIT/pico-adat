@@ -15,10 +15,14 @@ include_directories(src)
 
 # Add source files
 add_executable(main
-    src/main.cpp
+    # src/main.cpp
+    src/main-hatach.c
+    src/usb_descriptors.c
 )
 
 # Link in libraries/pico-sdk
 target_link_libraries(main
     pico_stdlib
+    tinyusb_device
+    tinyusb_board
 )
